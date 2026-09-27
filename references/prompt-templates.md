@@ -1,7 +1,7 @@
-# 7 大排版设计生图 Prompt 模板库 (Prompt Templates)
+# 9 大排版设计生图 Prompt 模板库 (Prompt Templates)
 
-本文档提供 7 种排版风格的完整提示词装配模板。所有模板均包含：
-- **占位符规范**：`{MAIN_TITLE}`（主标题）、`{SUB_TITLE}`（副标题）、`{ENGLISH_SLOGAN}`（英文口号/点缀词）、`{ACCENT_COLOR}`（点缀主色，默认 lime green / bright red）。
+本文档提供 9 种排版风格的完整提示词装配模板。所有模板均包含：
+- **占位符规范**：`{MAIN_TITLE}`（主标题）、`{SUB_TITLE}`（副标题）、`{ENGLISH_SLOGAN}`（英文口号/点缀词）、`{ACCENT_COLOR}`（点缀主色，默认 lime green / bright red / electric yellow）。
 - **通用环境配置**：`clean white background with subtle engineering grid texture, high-end graphic design poster, premium typography art direction`。
 - **画幅配置**：默认 `--ar 5:2`（X Articles 长文封面），推文可用 `--ar 16:9`。
 
@@ -76,7 +76,6 @@ High-end typography digital banner poster, strictly following the layout and pro
 High-end minimalist editorial graphic design poster, adhering strictly to the exact composition of the reference image. A single horizontal row of four Chinese characters "{MAIN_TITLE}" with wide generous spacing between each character, rendered in deep solid black architectural sans-serif font. In the negative space immediately to the upper right of each character, a tiny elegant vertical line of uppercase Romanized Pinyin: {VERTICAL_PINYIN_MAP}. All vertical Pinyin text blocks are perfectly aligned with identical vertical baseline and neat typography. Pure white background with faint subtle geometric graph paper grid, serene Japanese editorial design, masterclass spacing and visual rhythm --ar 5:2 --v 6.1
 ```
 
-
 ---
 
 ## 模板 06: 赛博机能波点 3D 胶囊风 (Halftone 3D Badge)
@@ -101,3 +100,40 @@ Futuristic techwear typographic poster design. Massive bold Chinese title "{MAIN
 High-end minimalist editorial graphic design poster, strictly adhering to the exact composition and visual design of the reference image. In the center, Chinese characters "{MAIN_TITLE}" in massive heavy solid jet-black sans-serif font. The central black characters are completely solid, fully intact, and completely unbroken, with zero lines cutting through them. Positioned slightly above the solid black characters, there is a short, low-profile wireframe slice showing only the top tips (top 20-25% edge) of the characters drawn in crisp thin black outline. Positioned slightly below the solid black characters, there is a short, low-profile wireframe slice showing only the bottom feet (bottom 20-25% edge) of the characters drawn in crisp thin black outline. Both wireframe outline slices have low height. At the very top, a widely-spaced single line of uppercase sans-serif English "{ENGLISH_SLOGAN}". Pure white background with very faint subtle light-grey engineering graph paper grid, Swiss modernist typography, ultra-clean vector graphic art --ar 5:2 --v 6.1
 ```
 
+---
+
+## 模板 08: 荧光马克划线风 (Highlighter Focus)
+> **参考图**：`assets/examples/08-highlighter-focus.jpg`  
+> **适用题材**：深度思考、核心认知、金句提炼、读书手记、重点破局  
+> **排版结构法则（高灵活性 · 笔迹多变）**：
+> - **笔迹形态（Wavy vs Straight）**：
+>   - **波浪手绘笔迹（Wavy Squiggly Underline）**：在文字底部画出动感的波浪形手绘马克笔迹，圆润笔触（`stroke-linecap="round"`），极具随手划重点的自由度与读书笔记呼吸感；
+>   - **直线块状笔迹（Straight / Slanted Block）**：平直或带微倾斜（-12°）的几何色块，像底座地平线一样利落干脆。
+> - **覆盖范围（Keyword vs Full）**：
+>   - **局部关键词聚焦（Keyword Focus，默认推荐）**：荧光笔迹仅垫在后两个关键字（或核心动词）下方，右上方搭配一个极简指向微标（如 `KEYWORD ↗`），打破均质大黑字，灵动破局；
+>   - **全词通栏覆盖（Full Title Focus）**：荧光笔迹贯穿整组大字底部，扎实沉稳。
+
+### 模式 08-A: 波浪手绘笔迹划线版 (Wavy Underline · 默认推荐)
+```text
+High-end minimalist editorial typography poster, adhering strictly to the aesthetic of the reference image. In the center, massive ultra-bold jet-black sans-serif Chinese characters "{NORMAL_TITLE_CHARS}{HIGHLIGHTED_KEYWORD_2CHARS}" arranged in a single horizontal line with powerful visual weight. Directly underneath the characters "{HIGHLIGHTED_KEYWORD_2CHARS}", there is a lively, organic hand-drawn wavy squiggly highlighter stroke in bright electric fluorescent yellow (#FFE600), rendered with smooth rounded vector line caps and rich translucent marker ink opacity. Above the highlighted word on the right, a tiny neat minimalist diagonal arrow icon with the micro label "KEYWORD ↗". Across the bottom, an elegant wide-spaced subtitle "{SUB_TITLE_ENGLISH}". Crisp white background with delicate light-grey technical millimeter grid paper lines, modern Swiss editorial design, intentional asymmetric balance and focus --ar 5:2 --v 6.1
+```
+
+### 模式 08-B: 几何直线色块高亮版 (Straight Block Highlight)
+```text
+Modern minimalist Swiss editorial typography poster. In the center, massive ultra-bold solid jet-black sans-serif Chinese characters "{MAIN_TITLE}" arranged in a single horizontal line. A clean, sharp-edged vibrant fluorescent yellow highlighter marker block with a subtle -12 degree dynamic forward slant runs directly underneath "{HIGHLIGHTED_PORTION}", acting as a luminous shelf supporting the typography. Centered neatly below, an elegant capitalized English subtitle "{SUB_TITLE_ENGLISH}". Pristine white background with fine architectural grid paper texture, bold graphic hierarchy, clean contemporary graphic art --ar 5:2 --v 6.1
+```
+
+---
+
+## 模板 09: 工程图纸游标刻度风 (Precision Caliper)
+> **参考图**：`assets/examples/09-precision-caliper.jpg`  
+> **适用题材**：系统架构演进、代码重构、性能工程、底层基建剖析、技术规范  
+> **排版结构法则**：
+> - **四角工程裁切对准标**：画布四角分布极细微的 **L 型精密对齐十字角标（L-bracket alignment marks）**；
+> - **精密游标微刻度标尺**：主标题大字正下方紧贴一条精密的**工程刻度游标尺（Precision Caliper Scale Bar with Tick Marks）**；
+> - **数据胶囊标签框**：标尺中轴嵌入极简的数据微标（如 `DIMENSION: 100% // V2.0`），上下严谨居中对齐；
+> - **极客蓝图网格**：背景采用细微白底工程绘图网格，极度理性克制。
+
+```text
+High-end architectural engineering blueprint typography poster, adhering strictly to the precision graphic design of the reference image. In the center, massive ultra-bold solid jet-black sans-serif Chinese characters "{MAIN_TITLE}" with crisp architectural geometry. Positioned directly below the title characters is a highly detailed precision horizontal caliper scale bar, featuring a sharp horizontal datum line with evenly spaced fine millimeter tick marks. Centered directly underneath the scale bar is a small neat white rectangular data pill badge with a thin black border reading "{DATA_SPEC_TEXT}". Subtle minimalist L-shaped precision registration crop marks at the four corners of the canvas. Top header reads "{TOP_SPEC_HEADER}", and bottom footer reads "{BOTTOM_SUBTITLE}". Pure white canvas with delicate architectural grid blueprint lines, extreme Swiss engineering precision, technical developer aesthetic --ar 5:2 --v 6.1
+```

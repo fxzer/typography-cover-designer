@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Cover Designer · 9 大文字排版设计感矩阵 (3×3 Showcase)</title>
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --card-bg: #16191f;
+      --card-border: #262b35;
+      --text-main: #f0f3f6;
+      --text-sub: #8b949e;
+      --accent: #ffe600;
+      --accent-green: #39ff14;
+      --accent-cyan: #00e5ff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "MiSans", sans-serif;
+      padding: 40px 32px 60px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      max-width: 1440px;
+      width: 100%;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+    }
+    .title-area h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .title-area h1 span.badge {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .title-area p {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-top: 6px;
+    }
+    .meta-spec {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      color: var(--text-sub);
+      text-align: right;
+    }
+    .grid-container {
+      max-width: 1440px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #444d5d;
+    }
+    .image-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+    .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-info {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .style-id {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 1px;
+    }
+    .style-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .style-desc {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+    .footer {
+      max-width: 1440px;
+      width: 100%;
+      margin-top: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-sub);
+      border-top: 1px solid var(--card-border);
+      padding-top: 16px;
+    }
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title-area">
+      <h1>Typography Cover Designer <span class="badge">3×3 Grid</span></h1>
+      <p>9 大高阶文字排版设计感矩阵 · 专为 X Articles 封面与极客技术推文打造</p>
+    </div>
+    <div class="meta-spec">
+      RATIO: 16:9 / 5:2 SAFE ZONE<br>
+      SYSTEM: SWISS EDITORIAL MATRIX
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <!-- Card 01 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/01-color-block.jpg" alt="01 色块聚焦堆叠风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">01 · 色块聚焦堆叠风</span>
+          <span class="style-id">#COLOR-BLOCK</span>
+        </div>
+        <p class="style-desc">双行紧凑大字 + 居中小英文 + 纯平面正圆贴纸聚焦，破框视觉冲击</p>
+      </div>
+    </div>
+
+    <!-- Card 02 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/02-line-weave.jpg" alt="02 灵动曲线穿插风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">02 · 灵动曲线穿插风</span>
+          <span class="style-id">#LINE-WEAVE</span>
+        </div>
+        <p class="style-desc">单行粗黑大字 + 天地小字副标 + 荧光绿立体手绘流线穿插笔画内外</p>
+      </div>
+    </div>
+
+    <!-- Card 03 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/03-script-clash.jpg" alt="03 刚柔双字碰撞风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">03 · 刚柔双字碰撞风</span>
+          <span class="style-id">#SCRIPT-CLASH</span>
+        </div>
+        <p class="style-desc">4字单行水平居中 / 5~6字错落自适应 + 鲜红飘逸连笔花体草书跨层交叠</p>
+      </div>
+    </div>
+
+    <!-- Card 04 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/04-outline-underlay.jpg" alt="04 虚实线框衬底风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">04 · 虚实线框衬底风</span>
+          <span class="style-id">#OUTLINE-UNDERLAY</span>
+        </div>
+        <p class="style-desc">实心居中大字 + 底部宽距副标 + 贯穿全画幅的超大虚线镂空英文字衬底</p>
+      </div>
+    </div>
+
+    <!-- Card 05 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/05-vertical-inset.jpg" alt="05 东方呼吸竖排风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">05 · 东方呼吸竖排风</span>
+          <span class="style-id">#VERTICAL-INSET</span>
+        </div>
+        <p class="style-desc">横向大字等宽拉大留白 + 右上肩微缩拼音/英文严格水平基线平齐，日系禅意</p>
+      </div>
+    </div>
+
+    <!-- Card 06 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/06-halftone-3d-badge.jpg" alt="06 赛博机能波点风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">06 · 赛博机能波点风</span>
+          <span class="style-id">#HALFTONE-3D</span>
+        </div>
+        <p class="style-desc">半色调波点渐变字面 + 荧光绿3D硬阴影 + 倾斜黑色胶囊反白标牌，硬核机能</p>
+      </div>
+    </div>
+
+    <!-- Card 07 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/07-glitch-slice.jpg" alt="07 故障切片抽离风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">07 · 故障切片抽离风</span>
+          <span class="style-id">#GLITCH-SLICE</span>
+        </div>
+        <p class="style-desc">完整实心黑体大字（无切断）+ 上下浅高度描边线框动态向外抽离残影</p>
+      </div>
+    </div>
+
+    <!-- Card 08 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/08-highlighter-focus.jpg" alt="08 荧光马克划线风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">08 · 荧光马克划线风</span>
+          <span class="style-id">#HIGHLIGHTER-FOCUS</span>
+        </div>
+        <p class="style-desc">单行粗黑大字 + 亮黄荧光笔迹划线聚焦 + 右上角微标（默认局部关键词高亮）</p>
+      </div>
+    </div>
+
+    <!-- Card 09 -->
+    <div class="card">
+      <div class="image-wrap">
+        <img src="assets/showcase/09-precision-caliper.jpg" alt="09 工程图纸刻度风" />
+      </div>
+      <div class="card-info">
+        <div class="card-title-row">
+          <span class="style-name">09 · 工程图纸刻度风</span>
+          <span class="style-id">#PRECISION-CALIPER</span>
+        </div>
+        <p class="style-desc">四角 L 型十字对齐角标 + 居中大字 + 精密游标刻度标尺与尺寸胶囊，极客工程</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Typography Cover Designer Skill © 2026 fxzer</div>
+    <div>Press Cmd+Shift+4 (Mac) or F11 (Fullscreen) for high-res screenshots</div>
+  </div>
+
+</body>
+</html>
